@@ -1,3 +1,5 @@
+//Almost certainly can remove the jawsDB part of this but leaving it until we settle on storage.
+
 var mysql = require('mysql');               // Mysql
 
 if (process.env.JAWSDB_URL) {

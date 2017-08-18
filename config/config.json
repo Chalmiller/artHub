@@ -1,8 +1,10 @@
+//MAY OR MAY NOT NEED DEPENDING ON DB
+
 {
   "development": {
-    "username": "root",
-    "password": "admin",
-    "database": "burgers_db",
+    "username": "",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -14,11 +16,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable" : "JAWSDB_URL",
-    // "username": "bw92p6a78y5e9p3f",
-    // "password": "d747h2oazzbcgtvc",
-    // "database": "database_production",
-    // "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable" : "",
+    "username": "",
+    "password": "",
+    "database": "database_production",
+    "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
