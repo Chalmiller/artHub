@@ -1,0 +1,84 @@
+.wrapper {
+  padding: 15px;
+  margin: 0% 20% 0% 20%;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 64px 115px 180px 180px 64px;
+  grid-gap: 10px;
+  grid-template-areas:
+  "hd hd"
+  "add add"
+  "uneaten uneaten"
+  "devoured devoured"
+  "ft ft";
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  /*font-size: 24px;*/
+  padding: 10px;
+  margin: 0px 15px 0px 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.burgerlist {
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.newburgerlist {
+  font-size: 12px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr 1fr 1fr);
+}
+
+
+/*Grid Areas*/
+  .uneaten {
+    grid-area: uneaten;
+    margin-left: 15px;
+    background-color: #883803;
+  }
+
+  .devoured {
+    grid-area: devoured;
+    margin-right: 15px;
+    background-color: #883803;
+    color: black;
+  }
+
+  .add {
+    text-align: center;
+    grid-area: add;
+    padding: 0px;
+    margin: 0px 15px 0px 15px;
+    background-color: #0c8800;
+    color: yellow;
+  }
+
+  .header {
+    border-radius: 35px 35px 0px 0px;
+    grid-area: hd;
+  }
+
+  .footer {
+    border-radius: 0px 0px 25px 25px;
+    grid-area: ft;
+  }
+/*Grid Areas*/
+
+.aux {
+  text-align: center;
+  padding-top: 0px;
+  font-size: 16px;
+  background-color: #db9300;
+  margin: 0px;
+}
+
+h3{
+  margin-top: 0px;
+}
+

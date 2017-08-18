@@ -1,0 +1,41 @@
+<div class="box header aux">
+<h1> Enjoy the Hamburger </h1>
+</div>
+
+
+<div class="box uneaten">
+    <h3> Pick a burger</h3>
+    <div class="newburgerlist">
+      {{#each burgers}}
+        {{#unless this.devoured}}
+          <p class="newbrg">
+            {{this.id}}. {{this.burger_name}}
+            {{> burger/devour-burger}}
+          </p>
+        {{/unless}}
+      {{/each}}
+    </div>
+</div>
+<div class="box devoured">
+    <h3> You already ate these burgers - don't you remember?!</h3>
+    <div class="burgerlist">
+      {{#each burgers}}
+        {{#if this.devoured}}
+          <p>
+            {{this.burger_name}}
+          </p>
+        {{/if}}
+      {{/each}}
+    </div>
+</div>
+<div class="box add">
+    <h2>Add A Burger</h2>
+    <form action="/" method="POST">
+      <input type="text" name="newBurger" id="newBurgerName">
+      <button type="submit" class="burgbtn">Add My Burger!</button>
+    </form>
+</div>
+
+<div class="box footer aux">
+<h1> Enjoyed the Hamburger <h1>
+</div>
