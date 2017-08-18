@@ -1,15 +1,3 @@
-CREATE DATABASE burgers_db;
+--MAY OR MAY NOT NEED DEPENDING ON WHICH DB WE GO WITH
 
--- -- Created the table "burgers"
--- CREATE TABLE burgers (
---   id int (10) AUTO_INCREMENT,
---   burger_name varchar(30) NOT NULL,
---   devoured BOOL NOT NULL DEFAULT false,
---   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
---   PRIMARY KEY(id)
--- );
-
--- INSERT INTO burgers (burger_name, devoured) VALUES ("Double Cheeseburger", false);
--- INSERT INTO burgers (burger_name, devoured) VALUES ("Bacon Burger", false);
--- INSERT INTO burgers (burger_name, devoured) VALUES ("Bleu Cheese Burger", false);
--- INSERT INTO burgers (burger_name, devoured) VALUES ("Double Double", true);
+CREATE DATABASE --DB NAME;
