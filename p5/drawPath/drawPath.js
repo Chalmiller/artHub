@@ -20,7 +20,7 @@ function draw() {
     // If it's time for a new point
     if (millis() > next && painting) {
 
-        // Grab mouse position      
+        // Grab mouse position
         current.x = mouseX;
         current.y = mouseY;
 

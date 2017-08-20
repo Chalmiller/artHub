@@ -1,5 +1,21 @@
 function setup() {
-    createCanvas(600, 600);
+
+    createCanvas(720, 360);
+    background(0);
+    noStroke();
+
+    var gridSize = 35;
+
+    for (var x = gridSize; x <= width - gridSize; x += gridSize) {
+        for (var y = gridSize; y <= height - gridSize; y += gridSize) {
+            noStroke();
+            fill(255);
+            rect(x - 1, y - 1, 3, 3);
+            stroke(255, 50);
+            line(x, y, width / 2, height / 2);
+        }
+    }
+
 }
 
 function draw() {
@@ -10,11 +26,6 @@ function draw() {
         //replace with color argument
         fill(255);
     }
-    rect(mouseX, mouseY, 55, 55);
-    rect(100, 200, 55, 55);
-    ellipse(mouseX, mouseY, 80, 80);
-    rectMode(CORNER); // Default rectMode is CORNER
+    ellipse(mouseX, mouseY, 10, 10);
     fill(255); // Set fill to white
-    rect(25, 25, 50, 50); // Draw white rect using CORNER mode
-    triangle(mouseX, mouseY, mouseX, mouseY);
 }
