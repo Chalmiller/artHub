@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- link for arthub font family -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Rubik">
-    <link rel="stylesheet" href="public/assets/css/style.css" >
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <!-- link for modals -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/css/iziModal.min.css">
-      <script
-      src="https://code.jquery.com/jquery-3.2.1.js"
-      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -24,15 +21,16 @@
     <meta name="description" content="A simple library to take care of complex CSS animations." />
     <meta property="og:image" content="./assets/screenshot.png" />
 
-  </head>
-  <body>
-  <header>
+</head>
 
-  <a href="https://github.com/dolce/iziModal" class="trigger">LogIn</a>
-<!-- Modal structure -->
-<div id="modal">
-    <!-- Page content -->
-    <div class="modal-content">
+<body>
+    <header>
+
+        <a href="https://github.com/dolce/iziModal" id="trigger">LogIn</a>
+        <!-- Modal structure -->
+        <!-- <div id="modal"> -->
+        <!-- Page content -->
+        <!-- <div class="modal-content">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
@@ -42,33 +40,9 @@
         <i class="icomoon icon-google-plus"></i>
         <button class="google">Sign in with Google</button>
         </div>
-          <!-- <form role="form">
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter password">
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" value="" checked>Remember me</label>
-            </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-          </form> -->
         </div>
-        <!-- <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
-        </div> -->
       </div>
 </div>
-      <!-- <div id="login"> -->
-<!--       <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-    <button class="btn" data-izimodal-iframeurl="http://..." data-izimodal-open="#modal-iframe">LogIn</button> -->
-    <!-- <a href="#" class="trigger">Modal</a> -->
-    <!-- </div> -->
   </header>
   <div class="container">
   <div class="img">
@@ -89,147 +63,210 @@
     <div class="element1 nodisplay"></div>
     <div class="element2 nodisplay"></div>
     <div class="element3 nodisplay"></div>
-    </div>
-    
+    </div> -->
 
-    <!-- <div class="scroll-down">
+
+        <!-- <div class="scroll-down">
       <p>scroll down</p>
       <div class="down-arrow"></div>
     </div> -->
 
-    </div>
-    </div>
+        </div>
+        </div>
+
+        <div class="modal">
+            <!-- <div class="modal-dialog" role="document"> -->
+            <div class="modal-content">
+                <div class="modal-header2">
+                    <div class="dropdown">
+                        <button id="dropbtn" class="modal-title">Add Drawing</button>
+                        <div class="dropdown-content">
+                            <p>Brush</p>
+                            <p>Erase</p>
+                            <p>Fill with color</p>
+                            <p>Text</p>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdownVideo">
+                        <button id="dropbtn" class="modal-title">Add Video</button>
+                        <div class="dropdown-video">
+                            <p>Record</p>
+                            <p>Stop</p>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdownVoice">
+                        <button id="dropbtn" class="modal-title">Add Voice</button>
+                        <div class="dropdown-voice">
+                            <p>Record</p>
+                            <p>Stop</p>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
 
 
 
+            </div>
+            <div class="modal-body">
+                <img src="public/assets/images/art.jpg" width="100%" height="100%">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Reset</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
+            </div>
+            <!-- </div> -->
+        </div>
+        </div>
 
-    
- <script src="./dist/choreographer.min.js"></script>
-    <script src="./index.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-    
-    <script>
-    $( document ).ready(function() {
-        console.log('ready');
-       setTimeout(function(){
-        $(".element0").typed({
-            strings: ["DRAW SOME SHIT"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 0);
+        <!-- <script src="./dist/choreographer.min.js"></script>
+    <script src="./index.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                console.log('ready');
+                setTimeout(function() {
+                    $(".element0").typed({
+                        strings: ["DRAW SOME SHIT"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 0);
 
-setTimeout(function(){
-        $(".element1").css("display", "inherit");
-        $(".element1").typed({
-            strings: ["SING SOME SHIT"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 2000);
+                setTimeout(function() {
+                    $(".element1").css("display", "inherit");
+                    $(".element1").typed({
+                        strings: ["SING SOME SHIT"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 2000);
 
-setTimeout(function(){
-        $(".element2").css("display", "inherit");
-        $(".element2").typed({
-            strings: ["MAKE YOUR OWN VIDEO"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 4000);
+                setTimeout(function() {
+                    $(".element2").css("display", "inherit");
+                    $(".element2").typed({
+                        strings: ["MAKE YOUR OWN VIDEO"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 4000);
 
-setTimeout(function(){
-        $(".element3").css("display", "inherit");
-        $(".element3").typed({
-            strings: ["SHARE IT WITH FRIENDS"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 6000);
-
-setTimeout(function(){
-        $(".element4").css("display", "inherit");
-        $(".element4").typed({
-            strings: ["EAT"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 8000);
-
-    setTimeout(function(){
-        $(".element5").css("display", "inherit");
-        $(".element5").typed({
-            strings: ["REPEAT"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 10000);
-
-    // $("#btn").click(function(){
-    //     $("#myModal").modal();
-    //     // $(".modal-content").css("visiblity", "visible");
-    // });
-
-    $("#modal").iziModal();
-
-    $(document).on('click', '.trigger', function (event) {
-        event.preventDefault();
-        $('#modal').iziModal('open');
-    });
-
-    $(document).on('click', '.close', function (event) {
-        event.preventDefault();
-        $('#modal').iziModal('close');
-    });
-
-    // $(document).on('click', '.trigger', function (event) {
-    //     event.preventDefault();
-    //     console.log("HEy");
-    //     $('#myModal').iziModal('open')
-    //     // or
-    //     $('#modal-iframe').iziModal('open', event); // Use "event" to get URL href
-    //     $("#modal-iframe").iziModal({
-    //         iframe: true,
-    //         iframeHeight: 800,
-    //         iframeURL: "http://izimodal.dolce.ninja"
-    //     });
-    // });
+                setTimeout(function() {
+                    $(".element3").css("display", "inherit");
+                    $(".element3").typed({
+                        strings: ["SHARE IT WITH FRIENDS"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 6000);
 
 
-    // $("#modal").iziModal({
+                // $("#modal").iziModal();
 
-    // onOpening: function(modal){
+                // $(document).on('click', '#trigger', function (event) {
+                //     event.preventDefault();
+                //     $('#modal').iziModal('open');
+                // });
 
-    //     modal.startLoading();
+                // $(document).on('click', '.close', function (event) {
+                //     event.preventDefault();
+                //     $('#modal').iziModal('close');
+                // });
 
-    //     $.get('#myModal', function(data) {
-    //         $("#modal .iziModal-content").html(data);
+                $(".modal").iziModal();
 
-    //         modal.stopLoading();
-    //     });
-    // }
+                $(document).on('click', '#trigger', function(event) {
+                    event.preventDefault();
+                    $('.modal').iziModal('open');
+                });
 
-});
+                $(document).on('click', '.close', function(event) {
+                    event.preventDefault();
+                    $('.modal').iziModal('close');
+                });
 
-    </script>
+                //------------OAuth---------------//
+                //Function called for login/out button listener
+                //  function toggleSignIn() {
+                //   if (!firebase.auth().currentUser) {
+                //     var provider = new firebase.auth.GoogleAuthProvider();
+                //     provider.addScope('profile');
+                //     firebase.auth().signInWithPopup(provider).then(function(result) {
+                //       //Gives Google access token
+                //       var token = result.credential.accessToken;
+                //       var user = result.user;
 
-  </body>
+                //     }).catch(function(error) {
+                //       //REcords errors for clarity
+                //       var errorCode = error.code;
+                //       var errorMessage = error.message;
+                //       var email = error.email;
+                //       var credential = error.credential;
+                //       if (errorCode === 'auth/account-exists-with-different-credential') {
+                //         alert('You have already signed up with a different auth provider for that email.');
+
+                //       } else {
+                //         console.error(error);
+                //       }
+
+                //     });
+
+                //   } else {
+                //     // firebase.auth().signOut();
+                //     firebase.auth().signOut().then(function() {
+                //     console.log('Signed Out');
+                // }, function(error) {
+                //     console.error('Sign Out Error', error);
+                // });
+
+                //   }
+
+                //   document.getElementById('trigger').disabled = true;
+
+                // }
+                // //Called on page/window load to add listener to UI
+                // function initApp(database) {
+                //   //Listens for state changes
+                //   firebase.auth().onAuthStateChanged(function(user) {
+                //     if (user) {
+
+                //       window.user = user;
+
+                //       document.getElementById('trigger').textContent = 'Sign out';
+
+                //       getData(database);
+                //     } else {
+                //       window.user = null
+
+                //       document.getElementById('trigger').textContent = 'Sign in with Google';
+                //     }
+                //     document.getElementById('trigger').disabled = false;
+                //   });
+
+                //   document.getElementById('trigger').addEventListener('click', toggleSignIn, false);
+                // }
+
+            });
+        </script>
+
+</body>
+
 </html>
