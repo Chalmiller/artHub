@@ -9,8 +9,8 @@
       {{#each burgers}}
         {{#unless this.devoured}}
           <p class="newbrg">
-            {{this.id}}. {{this.burger_name}}
-            {{> burger/devour-burger}}
+            {{this.id}}. {{this.screenname}}
+            {{!-- {{> burger/devour-burger}} --}}
           </p>
         {{/unless}}
       {{/each}}
