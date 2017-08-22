@@ -9,8 +9,7 @@
       {{#each burgers}}
         {{#unless this.devoured}}
           <p class="newbrg">
-            {{this.id}}. {{this.burger_name}}
-            {{> burger/devour-burger}}
+            {{this.id}}. {{this.screenname}}
           </p>
         {{/unless}}
       {{/each}}
@@ -32,8 +31,8 @@
     <h2>Add A Burger</h2>
     <form action="/" method="POST">
       <input type="text" name="newBurger" id="newBurgerName">
-      <button type="submit" class="burgbtn">Add My Burger!</button>
-    </form>
+      <input type="submit" class="burgbtn">Add My   Burger!</input>
+      </form>
 </div>
 
 <div class="box footer aux">

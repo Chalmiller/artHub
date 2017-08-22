@@ -1,10 +1,8 @@
-//MAY OR MAY NOT NEED DEPENDING ON DB
-
 {
   "development": {
-    "username": "",
-    "password": "",
-    "database": "",
+    "username": "root",
+    "password": "admin",
+    "database": "Users_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
