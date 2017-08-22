@@ -1,54 +1,58 @@
+
 <script src="../routes/dropdownTest.js"></script>
 <div class="box header aux">
-  <h1> Enjoy the Hamburger </h1>
+  <h1> ArtHub </h1>
 </div>
-<div class="container">
-  <h2>Functions</h2>
-  <p>Here are the functions to choose from.</p>
-  <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Functions</button>
-    <div id = "myDropdown" class = "dropdown-content">
-      <a href="../p5/drawShapes/drawindex.html">Draw Shapes</a>
-      <a href="../p5/drawPath/drawPath.html">Draw a Path</a>
-      <a href="../p5/frequencyOscillation/oscillateFrequencyIndex.html">Frequency Oscillator</a>
-      <a href="../p5/particleSystem/particleIndex.html">Particle System</a>
-      <a href="../p5/splatter/splatterPaintIndex.html">Splatter Paint</a>
-    </div>
-  </div>
+<div class = "functions"
+  <form action="../p5/drawShapes/drawindex.html">
+      <input type="submit" value="Draw Shapes" />
+  </form>
+  <form action="../p5/drawPath/drawPath.html">
+      <input type="submit" value="Draw Paths" />
+  </form>
+  <form action="../p5/frequencyOscillation/oscillateFrequencyIndex.html">
+      <input type="submit" value="Frequency Oscillation" />
+  </form>
+  <form action="../p5/particleSystem/particleIndex.html">
+      <input type="submit" value="Particle System" />
+  </form>
+  <form action="../p5/splatter/splatterPaintIndex.html">
+      <input type="submit" value="Draw Shapes" />
+  </form>
 </div>
 </div>
 <div class="box uneaten">
-<h3> Pick a burger</h3>
-<div class="newburgerlist">
-  {{#each burgers}}
-  {{#unless this.devoured}}
-  <p class="newbrg">
-    {{this.id}}. {{this.burger_name}}
-    {{> burger/devour-burger}}
-  </p>
-  {{/unless}}
-  {{/each}}
-</div>
+  <h3> Pick a burger</h3>
+  <div class="newburgerlist">
+    {{#each burgers}}
+    {{#unless this.devoured}}
+    <p class="newbrg">
+      {{this.id}}. {{this.burger_name}}
+      {{> burger/devour-burger}}
+    </p>
+    {{/unless}}
+    {{/each}}
+  </div>
 </div>
 <div class="box devoured">
-<h3> You already ate these burgers - don't you remember?!</h3>
-<div class="burgerlist">
-  {{#each burgers}}
-  {{#if this.devoured}}
-  <p>
-    {{this.burger_name}}
-  </p>
-  {{/if}}
-  {{/each}}
-</div>
+  <h3> You already ate these burgers - don't you remember?!</h3>
+  <div class="burgerlist">
+    {{#each burgers}}
+    {{#if this.devoured}}
+    <p>
+      {{this.burger_name}}
+    </p>
+    {{/if}}
+    {{/each}}
+  </div>
 </div>
 <div class="box add">
-<h2>Add A Burger</h2>
-<form action="/" method="POST">
-  <input type="text" name="newBurger" id="newBurgerName">
-  <button type="submit" class="burgbtn">Add My Burger!</button>
-</form>
+  <h2>Add A Burger</h2>
+  <form action="/" method="POST">
+    <input type="text" name="newBurger" id="newBurgerName">
+    <button type="submit" class="burgbtn">Add My Burger!</button>
+  </form>
 </div>
 <div class="box footer aux">
-<h1> Enjoyed the Hamburger <h1>
+  <h1> Enjoyed the Hamburger <h1>
 </div>
