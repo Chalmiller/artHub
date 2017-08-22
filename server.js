@@ -10,7 +10,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
-var cloudinfo = require("./apikey/keys.js")
+// var cloudinfo = require(__dirname + "./apikey/keys.js")
 
 // Serve static content for the app from the "asset" directory in the application directory.
 
@@ -32,7 +32,11 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
-cloudinary.config(cloudinfo);
+cloudinary.config({
+  cloud_name: 'arthub',
+  api_key: '372987164826464',
+  api_secret: 'a676b67565c6767a6767d6767f676fe1'
+});
 
 // require("./controllers/burger-controller.js")(app);
 
