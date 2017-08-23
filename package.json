@@ -1,22 +1,8 @@
 {
-  "name": "my_sequelize_burger",
+  "name": "artHub",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ArbutusNate/burger.git"
-  },
-  "keywords": [],
-  "author": "Nathan Crawford",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ArbutusNate/burger/issues"
-  },
-  "homepage": "https://github.com/ArbutusNate/burger#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "choreographer-js": "^1.1.0",
@@ -32,5 +18,20 @@
     "sequelize": "^4.5.0",
     "typed": "^0.3.3"
   },
-  "description": ""
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArbutusNate/artHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArbutusNate/artHub/issues"
+  },
+  "homepage": "https://github.com/ArbutusNate/artHub#readme"
 }

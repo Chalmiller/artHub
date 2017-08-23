@@ -1,62 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>ArtHub</title>
-    <!-- Latest compiled and minified CSS & JS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/assets/css/style.css" media="screen" title="no title">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  </head>
-  <div class="box header aux">
-    <h1> ArtHub </h1>
-  </div>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Functions
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" id = "drawShapes" href="../p5/drawShapes/drawindex.html">Draw Shapes</a>
-      <a class="dropdown-item" id = "drawPaths"href="../p5/drawPath/drawPath.html">Draw Path</a>
-      <a class="dropdown-item" id = "frequencyOscillation" href="../p5/frequencyOscillation/oscillateFrequencyIndex.html">Frequency Oscillation</a>
-      <a class="dropdown-item" id = "particleSystem" href="../p5/particleSystem/particleIndex.html">Particle System</a>
-      <a class="dropdown-item" id = "splatterPaint" href="../p5/splatter/splatterPaintIndex.html">Splatter Paint</a>
+<body>
+    <header>
+
+        <a href="https://github.com/dolce/iziModal" id="trigger">LogIn</a>
+        <a href="https://github.com/dolce/iziModal" id="logOut">LogOut</a>
+        <!-- Modal structure for login -->
+        <div id="modal">
+        <!-- Page content -->
+        <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+        <div id="loginWrapper">
+        <i class="icomoon icon-google-plus"></i>
+        <button class="google">Sign in with Google</button>
+        </div>
+        </div>
+      </div>
+</div>
+  </header>
+  <div class="container">
+  <div class="img">
+    <img src="assets/images/trippy.gif" width="200" height="200">
     </div>
-  </div>
-</div>
-<div class="box uneaten">
-  <h3> Pick a burger</h3>
-  <div class="newburgerlist">
-    {{#each burgers}}
-    {{#unless this.devoured}}
-    <p class="newbrg">
-      {{this.id}}. {{this.burger_name}}
-      {{> burger/devour-burger}}
-    </p>
-    {{/unless}}
-    {{/each}}
-  </div>
-</div>
-<div class="box devoured">
-  <h3> You already ate these burgers - don't you remember?!</h3>
-  <div class="burgerlist">
-    {{#each burgers}}
-    {{#if this.devoured}}
-    <p>
-      {{this.burger_name}}
-    </p>
-    {{/if}}
-    {{/each}}
-  </div>
-</div>
-<div class="box add">
-  <h2>Add A Burger</h2>
-  <form action="/" method="POST">
-    <input type="text" name="newBurger" id="newBurgerName">
-    <button type="submit" class="burgbtn">Add My Burger!</button>
-  </form>
-</div>
-<div class="box footer aux">
-  <h1> Enjoyed the Hamburger <h1>
-</div>
+
+    <div id="wrapper">
+      <div id="letters">
+        <div class="a">a</div>
+        <div class="r">r</div>
+        <div class="t">t</div>
+        <div class="H">H</div>
+        <div class="u">u</div>
+        <div class="b">b</div>
+    </div>
+    <div id="typedText">
+    <div class="element0 nodisplay"></div>
+    <div class="element1 nodisplay"></div>
+    <div class="element2 nodisplay"></div>
+    <div class="element3 nodisplay"></div>
+    </div>
+        </div>
+        </div>
+        <div class="modal">
+            <!-- <div class="modal-dialog" role="document"> -->
+            <div class="modal-content">
+                <div class="modal-header2">
+                    <div class="dropdown">
+                        <button id="dropbtn" class="modal-title">Add Drawing</button>
+                        <div class="dropdown-content">
+                            <p><button>Brush</button></p>
+                            <p><button>Erase</button></p>
+                            <p><button>Fill with color</button></p>
+                            <p><button>Text</button></p>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdownVideo">
+                        <button id="dropbtn" class="modal-title">Add Video</button>
+                        <div class="dropdown-video">
+                            <p><button>Record</button></p>
+                            <p><button>Stop</button></p>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdownVoice">
+                        <button id="dropbtn" class="modal-title">Add Voice</button>
+                        <div class="dropdown-voice">
+                            <p><button>Record</button></p>
+                            <p><button>Stop</button></p>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+
+
+
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/art.jpg" width="100%" height="100%">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Reset</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
+            </div>
+            <!-- </div> -->
+        </div>
+        </div>
+
+</body>
+
+</html>
