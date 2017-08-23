@@ -6,25 +6,27 @@ var Sequelize = require("sequelize");
 // // sequelize (lowercase) references our connection to the DB.
 var sequelize = require("../config/connection.js");
 
-var burger = function (sequelize, DataTypes) {
-  var Burger = sequelize.define("Burger", {
-    burger_name: Sequelize.STRING,
-    devoured:
+var users = function (sequelize, DataTypes) {
+  var Users = sequelize.define("Users", {
+    screenname: Sequelize.STRING,
+    uploads:
     {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false
+      type: Sequelize.STRING,
     },
     createdAt: {
+      type: Sequelize.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+    },
+    updatedAt: {
       type: Sequelize.DATE,
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   },{
     timestamps: true
   })
-  // Burger.sync();
-  return Burger;
+  return Users;
 }
 
-// Export the burger model for other files to use
+// Export the user model for other files to use
 
-module.exports = burger;
+module.exports = users;

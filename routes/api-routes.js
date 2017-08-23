@@ -1,5 +1,5 @@
+//Not sure if we need to require these here
 var express = require("express");
-
 var router = express.Router();
 
 // Import the model to use its database functions.
@@ -9,74 +9,29 @@ var db = require("../models");
 
 
 module.exports = function(app) {
+  //POST Methods
   app.post("/", function(req, res){
     console.log("---------req.body-----")
     console.log(req.body);
-    db.Burger.create({
-      burger_name : req.body.newBurger
-    }).then(function (dbBurgers){
+    db.Users.create({
+      //POST AND CREATE FUNCTIONS
+    }).then(function (dbUsers){
       var hbsObject = {
-        burgers: dbBurgers
+        userinfo: dbUsers
       };
       console.log(hbsObject)
       res.redirect("/");
     })
   });
+  //PUT Methods
   app.put("/:id", function(req, res) {
-    db.Burger.update({
-        devoured : true
+    db.Users.update({
+        //CULMN TO UPDATE
       }, {where: {
-        id : req.params.id
+        //ROW(S) TO UPDATE
       }
-    }).then(function(dbBurgers) {
+    }).then(function(dbUsers) {
       res.redirect("/");
     })
-  })
-  //   router.post("/", function(req,res){
-  //   console.log("burger-controller.js running POST");
-  //   console.log("New Burger Name: " + req.params.name)
-  //   // console.log("resuest: " + req.body);
-  //   // console.log("res: " + res.body);
-  //   burger.create(req.body.newBurger, function (){
-  //     res.redirect("/");
-  //   });
-  // });
+  });
 }
-
-
-// router.get("/", function(req, res) {
-//   console.log("burger-controller.js running GET");
-//   burger.all(function(data) {
-//     var hbsObject = {
-//       burgers: data
-//     };
-//     console.log("handlebars object: " + hbsObject);
-//     res.render("index", hbsObject);
-//   });
-// });
-
-// router.post("/", function(req,res){
-//   console.log("burger-controller.js running POST");
-//   console.log("New Burger Name: " + req.params.name)
-//   // console.log("resuest: " + req.body);
-//   // console.log("res: " + res.body);
-//   burger.create(req.body.newBurger, function (){
-//     res.redirect("/");
-//   });
-// });
-
-// router.put("/:id", function(req,res){
-//   console.log("burger-controller.js running PUT");
-//   var condition = req.params.id;
-//   var devoured = true;
-//   burger.devour(devoured, condition, function(){
-//     res.redirect("/");
-//   })
-//   // console.log("burger ID to be devoured: " req.params.id)
-// })
-
-// router.update("/:id", function(req,res) {
-//   burger.devour()
-// })
-
-// module.exports = router;

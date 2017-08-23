@@ -1,41 +1,62 @@
-<div class="box header aux">
-<h1> Enjoy the Hamburger </h1>
-</div>
-
-
-<div class="box uneaten">
-    <h3> Pick a burger</h3>
-    <div class="newburgerlist">
-      {{#each burgers}}
-        {{#unless this.devoured}}
-          <p class="newbrg">
-            {{this.id}}. {{this.burger_name}}
-            {{> burger/devour-burger}}
-          </p>
-        {{/unless}}
-      {{/each}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ArtHub</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/css/style.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <div class="box header aux">
+    <h1> ArtHub </h1>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Functions
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" id = "drawShapes" href="../p5/drawShapes/drawindex.html">Draw Shapes</a>
+      <a class="dropdown-item" id = "drawPaths"href="../p5/drawPath/drawPath.html">Draw Path</a>
+      <a class="dropdown-item" id = "frequencyOscillation" href="../p5/frequencyOscillation/oscillateFrequencyIndex.html">Frequency Oscillation</a>
+      <a class="dropdown-item" id = "particleSystem" href="../p5/particleSystem/particleIndex.html">Particle System</a>
+      <a class="dropdown-item" id = "splatterPaint" href="../p5/splatter/splatterPaintIndex.html">Splatter Paint</a>
     </div>
+  </div>
+</div>
+<div class="box uneaten">
+  <h3> Pick a burger</h3>
+  <div class="newburgerlist">
+    {{#each burgers}}
+    {{#unless this.devoured}}
+    <p class="newbrg">
+      {{this.id}}. {{this.burger_name}}
+      {{> burger/devour-burger}}
+    </p>
+    {{/unless}}
+    {{/each}}
+  </div>
 </div>
 <div class="box devoured">
-    <h3> You already ate these burgers - don't you remember?!</h3>
-    <div class="burgerlist">
-      {{#each burgers}}
-        {{#if this.devoured}}
-          <p>
-            {{this.burger_name}}
-          </p>
-        {{/if}}
-      {{/each}}
-    </div>
+  <h3> You already ate these burgers - don't you remember?!</h3>
+  <div class="burgerlist">
+    {{#each burgers}}
+    {{#if this.devoured}}
+    <p>
+      {{this.burger_name}}
+    </p>
+    {{/if}}
+    {{/each}}
+  </div>
 </div>
 <div class="box add">
-    <h2>Add A Burger</h2>
-    <form action="/" method="POST">
-      <input type="text" name="newBurger" id="newBurgerName">
-      <button type="submit" class="burgbtn">Add My Burger!</button>
-    </form>
+  <h2>Add A Burger</h2>
+  <form action="/" method="POST">
+    <input type="text" name="newBurger" id="newBurgerName">
+    <button type="submit" class="burgbtn">Add My Burger!</button>
+  </form>
 </div>
-
 <div class="box footer aux">
-<h1> Enjoyed the Hamburger <h1>
+  <h1> Enjoyed the Hamburger <h1>
 </div>

@@ -1,4 +1,8 @@
-var mysql = require('mysql');               // Mysql
+//Almost certainly can remove the jawsDB part of this but leaving it until we settle on storage.
+
+var mysql = require('mysql');
+// var sqlConnect = require("./apikeys/keys.js");
+// Mysql
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -8,8 +12,8 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     user: "root",
     password: "admin",
-    database: "burgers_db"
-  });
+    database: "Users_DB"
+});
 }
 
 
