@@ -1,9 +1,3 @@
-var shape;
-
-function preload() {
-  // Get the most recent earthquake in the database
-  var shape = ellipse
-}
 
 function setup() {
 
@@ -25,7 +19,7 @@ function setup() {
 
 }
 
-function draw(shape) {
+function draw() {
     if (mouseIsPressed) {
         //replace fill with coloronclick argument
         fill(0);
@@ -33,6 +27,6 @@ function draw(shape) {
         //replace with color argument
         fill(255);
     }
-    shape(mouseX, mouseY, 10, 10);
+    ellipse(mouseX, mouseY, 10, 10);
     fill(255); // Set fill to white
 }

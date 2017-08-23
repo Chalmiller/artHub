@@ -387,6 +387,11 @@ div#columns:hover figure:not(:hover) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
 }
+
+.img{
+    border-radius: 5px;
+}
+
 /*@media (max-width:660px) {
   #letters div {
     font-size: 38px;

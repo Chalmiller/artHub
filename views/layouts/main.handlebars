@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {{!-- META TAGS --}}
     <meta charset="UTF-8">
     <meta name="description" content="A simple library to take care of complex CSS animations." />
     <meta property="og:image" content="./assets/screenshot.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  {{!-- TITLE --}}
     <title>artHub</title>
-
+  {{!-- HEAD LINKS --}}
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- link for arthub font family -->
@@ -18,13 +19,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  <body>
-    <div class="wrapper">
+  {{!-- HANDLEBARS BODY FROM MAIN.HANDLEBARS --}}
     {{{ body }}}
-    </div>
-  <!-- Scripts -->
+  {{!-- Scripts --}}
      <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js" type="text/javascript"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+      {{!-- TYPED.JS INFO --}}
        <script>
             $(document).ready(function() {
                 console.log('ready');
@@ -99,6 +99,10 @@
                     event.preventDefault();
                     $('.modal').iziModal('close');
                 });
+                $(document).on('click', '#drawShapes', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                })
 
                 //------------OAuth---------------//
                 //Function called for login/out button listener
