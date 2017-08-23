@@ -99,6 +99,10 @@
                     event.preventDefault();
                     $('.modal').iziModal('close');
                 });
+                $(document).on('click', '#drawShapes', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                })
 
                 //------------OAuth---------------//
                 //Function called for login/out button listener
