@@ -20,7 +20,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(methodOverride("_method"));
 
-// app.use(express.static("assets"));
+app.use(express.static("assets"));
+app.use(express.static("public"));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
