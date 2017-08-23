@@ -19,7 +19,6 @@
             </div>
         </div>
     </header>
-  <div class="container">
         <div class="img">
             <img src="assets/images/trippy.gif" width="200" height="200">
         </div>
@@ -35,8 +34,8 @@
             <div class="art-display">
                 {{#each users}}
                     <p class="thumbnails">
-                    {{this.id}}. {{this.screenname}}
-                    {{> art/art-thumbnail}}
+                        {{this.id}}. {{this.screenname}}
+                        {{> art/art-thumbnail}}
                     </p>
                 {{/each}}
             </div>
@@ -47,7 +46,6 @@
                 <div class="element3 nodisplay"></div>
             </div>
         </div>
-    </div>
     <div class="modal">
         <div class="modal-content">
             <div class="modal-header2">
@@ -88,7 +86,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-primary">Reset</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
         </div>
     </div>
 </body>

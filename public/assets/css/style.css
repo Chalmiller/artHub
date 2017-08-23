@@ -80,6 +80,7 @@ a {
 .img {
     margin-top: 30px;
     text-align: center;
+    border-radius: 5px;
     /*position: fixed;*/
 }
 .element0.nodisplay {
@@ -323,10 +324,6 @@ a {
 #logOut:hover {
     color: #000000;
     text-decoration: none;
-}
-
-.img{
-    border-radius: 5px;
 }
 
 
