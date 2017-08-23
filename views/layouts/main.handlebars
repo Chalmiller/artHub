@@ -75,29 +75,29 @@
                     });
                 }, 6000);
 
-
-                $("#modal").iziModal();
-
-                $(document).on('click', '#trigger', function (event) {
-                    event.preventDefault();
-                    $('#modal').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function (event) {
-                    event.preventDefault();
-                    $('#modal').iziModal('close');
-                });
-
+                //  try us on click
                 $(".modal").iziModal();
 
-                $(document).on('click', '#logOut', function(event) {
+                $(document).on('click', '#tryUs', function (event) {
                     event.preventDefault();
                     $('.modal').iziModal('open');
                 });
 
-                $(document).on('click', '.close', function(event) {
+                $(document).on('click', '.close', function (event) {
                     event.preventDefault();
                     $('.modal').iziModal('close');
+                });
+                //  browse art on click
+                $("#columns").iziModal();
+
+                $(document).on('click', '#browseArt', function(event) {
+                    event.preventDefault();
+                    $('#columns').iziModal('open');
+                });
+
+                $(document).on('click', '.close', function(event) {
+                    event.preventDefault();
+                    $('#columns').iziModal('close');
                 });
                 $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();

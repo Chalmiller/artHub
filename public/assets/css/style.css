@@ -66,9 +66,9 @@ h4,
 #loginWrapper {
     text-align: left;
 }
-/*.nodisplay {
-  display: none;
-  }*/
+.header {
+  margin-top: 40px;
+}
 
 p {
     font-size: 13px;
@@ -124,7 +124,7 @@ a {
 #letters {
     position: fixed;
     text-align: center;
-    top: 280px;
+    top: 350px;
     width: 100%;
 }
 #letters div {
@@ -135,16 +135,14 @@ a {
     font-family: 'Rubik', sans-serif;
     transition: color 0.1s ease-in-out;
 }
-#trigger {
+#tryUs {
     font-size: 30px;
     color: #debe65;
     font-family: 'Rubik', sans-serif;
-    /*background-color: #000000;*/
-    /*padding: 15px;*/
     margin-left: 40px;
 }
-#trigger:hover {
-    background-color: #000000;
+#tryUs:hover {
+    color: #000000;
     text-decoration: none;
 }
 .modal-body {
@@ -310,17 +308,16 @@ a {
     margin: 20px;
 }
 
-#logOut {
+#browseArt {
   float: right;
   font-size: 30px;
   color: #debe65;
   font-family: 'Rubik', sans-serif;
-  /*background-color: #000000;*/
-  /*padding: 15px;*/
+  text-decoration: none;
   margin-right: 40px;
 }
 
-#logOut:hover {
+#browseArt:hover {
     color: #000000;
     text-decoration: none;
 }
@@ -339,22 +336,25 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: 50px auto;
+
 }
 
 div#columns figure {
   background: #fefefe;
   border: 2px solid #fcfcfc;
   box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  margin: 0 2px 15px;
+  /*margin: 0 2px 15px;
   padding: 15px;
   padding-bottom: 10px;
   transition: opacity .4s ease-in-out;
   display: inline-block;
-  column-break-inside: avoid;
+  column-break-inside: avoid;*/
+  text-align: center;
+
 }
 
 div#columns figure img {
-  width: 100%; height: auto;
+  width: 60%; height: auto;
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
   margin-bottom: 5px;
@@ -366,16 +366,16 @@ div#columns figure figcaption {
   line-height: 1.5;
 }
 
-div#columns small { 
+div#columns small {
   font-size: 1rem;
-  float: right; 
+  float: right;
   text-transform: uppercase;
   color: #aaa;
-} 
+}
 
-div#columns small a { 
-  color: #666; 
-  text-decoration: none; 
+div#columns small a {
+  color: #666;
+  text-decoration: none;
   transition: .4s color;
 }
 
@@ -383,7 +383,7 @@ div#columns:hover figure:not(:hover) {
   opacity: 0.4;
 }
 
-@media screen and (max-width: 750px) { 
+@media screen and (max-width: 750px) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
 }
