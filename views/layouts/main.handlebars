@@ -25,6 +25,143 @@
   <!-- Scripts -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js" type="text/javascript"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+       <script>
+            $(document).ready(function() {
+                console.log('ready');
+                setTimeout(function() {
+                    $(".element0").typed({
+                        strings: ["DRAW SOME SHIT"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 0);
+
+                setTimeout(function() {
+                    $(".element1").css("display", "inherit");
+                    $(".element1").typed({
+                        strings: ["SING SOME SHIT"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 2000);
+
+                setTimeout(function() {
+                    $(".element2").css("display", "inherit");
+                    $(".element2").typed({
+                        strings: ["MAKE YOUR OWN VIDEO"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 4000);
+
+                setTimeout(function() {
+                    $(".element3").css("display", "inherit");
+                    $(".element3").typed({
+                        strings: ["SHARE IT WITH FRIENDS"],
+                        typeSpeed: 30, // typing speed
+                        backDelay: 750, // pause before backspacing
+                        loop: false, // loop on or off (true or false)
+                        loopCount: false, // number of loops, false = infinite
+                        callback: function() {} // call function after typing is done
+                    });
+                }, 6000);
+
+
+                $("#modal").iziModal();
+
+                $(document).on('click', '#trigger', function (event) {
+                    event.preventDefault();
+                    $('#modal').iziModal('open');
+                });
+
+                $(document).on('click', '.close', function (event) {
+                    event.preventDefault();
+                    $('#modal').iziModal('close');
+                });
+
+                $(".modal").iziModal();
+
+                $(document).on('click', '#logOut', function(event) {
+                    event.preventDefault();
+                    $('.modal').iziModal('open');
+                });
+
+                $(document).on('click', '.close', function(event) {
+                    event.preventDefault();
+                    $('.modal').iziModal('close');
+                });
+
+                //------------OAuth---------------//
+                //Function called for login/out button listener
+                //  function toggleSignIn() {
+                //   if (!firebase.auth().currentUser) {
+                //     var provider = new firebase.auth.GoogleAuthProvider();
+                //     provider.addScope('profile');
+                //     firebase.auth().signInWithPopup(provider).then(function(result) {
+                //       //Gives Google access token
+                //       var token = result.credential.accessToken;
+                //       var user = result.user;
+
+                //     }).catch(function(error) {
+                //       //REcords errors for clarity
+                //       var errorCode = error.code;
+                //       var errorMessage = error.message;
+                //       var email = error.email;
+                //       var credential = error.credential;
+                //       if (errorCode === 'auth/account-exists-with-different-credential') {
+                //         alert('You have already signed up with a different auth provider for that email.');
+
+                //       } else {
+                //         console.error(error);
+                //       }
+
+                //     });
+
+                //   } else {
+                //     // firebase.auth().signOut();
+                //     firebase.auth().signOut().then(function() {
+                //     console.log('Signed Out');
+                // }, function(error) {
+                //     console.error('Sign Out Error', error);
+                // });
+
+                //   }
+
+                //   document.getElementById('trigger').disabled = true;
+
+                // }
+                // //Called on page/window load to add listener to UI
+                // function initApp(database) {
+                //   //Listens for state changes
+                //   firebase.auth().onAuthStateChanged(function(user) {
+                //     if (user) {
+
+                //       window.user = user;
+
+                //       document.getElementById('trigger').textContent = 'Sign out';
+
+                //       getData(database);
+                //     } else {
+                //       window.user = null
+
+                //       document.getElementById('trigger').textContent = 'Sign in with Google';
+                //     }
+                //     document.getElementById('trigger').disabled = false;
+                //   });
+
+                //   document.getElementById('trigger').addEventListener('click', toggleSignIn, false);
+                // }
+
+            });
+        </script>
   </body>
 </html>

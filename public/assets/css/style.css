@@ -40,7 +40,7 @@ body {
 .modal-header,
 h4,
 .close {
-    background-color: #5cb85c;
+    background-color: #087e8b;
     color: white !important;
     text-align: center;
     font-size: 30px;
@@ -230,8 +230,8 @@ a {
     display: block;
 }
 .dropdown:hover #dropbtn {
-    background-color: #444545;
-    color: #fff;
+    background-color: #c0c5ce;
+    /*color: #fff;*/
 }
 /*style for add video*/
 
@@ -262,8 +262,8 @@ a {
     display: block;
 }
 .dropdownVideo:hover #dropbtn {
-    background-color: #444545;
-    color: #fff;
+    background-color: #c0c5ce;
+    /*color: #fff;*/
 }
 /*style for add voice*/
 
@@ -294,11 +294,11 @@ a {
     display: block;
 }
 .dropdownVoice:hover #dropbtn {
-    background-color: #444545;
-    color: #fff;
+    background-color: #c0c5ce;
+    /*color: #fff;*/
 }
 .modal-header2 {
-    background-color: #debe65;
+    background-color: #087e8b;
     height: 80px;
 }
 .modal-title {

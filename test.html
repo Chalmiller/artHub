@@ -27,11 +27,11 @@
     <header>
 
         <a href="https://github.com/dolce/iziModal" id="trigger">LogIn</a>
-        <a href="/" id="logOut">LogOut</a>
+        <a href="https://github.com/dolce/iziModal" id="logOut">LogOut</a>
         <!-- Modal structure for login -->
-        <!-- <div id="modal"> -->
+        <div id="modal">
         <!-- Page content -->
-        <!-- <div class="modal-content">
+        <div class="modal-content">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
@@ -42,8 +42,8 @@
         <button class="google">Sign in with Google</button>
         </div>
         </div>
-      </div> -->
-<!-- </div> -->
+      </div>
+</div>
   </header>
   <div class="container">
   <div class="img">
@@ -82,10 +82,10 @@
                     <div class="dropdown">
                         <button id="dropbtn" class="modal-title">Add Drawing</button>
                         <div class="dropdown-content">
-                            <p>Brush</p>
-                            <p>Erase</p>
-                            <p>Fill with color</p>
-                            <p>Text</p>
+                            <p><button>Brush</button></p>
+                            <p><button>Erase</button></p>
+                            <p><button>Fill with color</button></p>
+                            <p><button>Text</button></p>
                         </div>
                     </div>
 
@@ -93,8 +93,8 @@
                     <div class="dropdownVideo">
                         <button id="dropbtn" class="modal-title">Add Video</button>
                         <div class="dropdown-video">
-                            <p>Record</p>
-                            <p>Stop</p>
+                            <p><button>Record</button></p>
+                            <p><button>Stop</button></p>
                         </div>
                     </div>
 
@@ -102,8 +102,8 @@
                     <div class="dropdownVoice">
                         <button id="dropbtn" class="modal-title">Add Voice</button>
                         <div class="dropdown-voice">
-                            <p>Record</p>
-                            <p>Stop</p>
+                            <p><button>Record</button></p>
+                            <p><button>Stop</button></p>
                         </div>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -180,21 +180,21 @@
                 }, 6000);
 
 
-                // $("#modal").iziModal();
+                $("#modal").iziModal();
 
-                // $(document).on('click', '#trigger', function (event) {
-                //     event.preventDefault();
-                //     $('#modal').iziModal('open');
-                // });
+                $(document).on('click', '#trigger', function (event) {
+                    event.preventDefault();
+                    $('#modal').iziModal('open');
+                });
 
-                // $(document).on('click', '.close', function (event) {
-                //     event.preventDefault();
-                //     $('#modal').iziModal('close');
-                // });
+                $(document).on('click', '.close', function (event) {
+                    event.preventDefault();
+                    $('#modal').iziModal('close');
+                });
 
                 $(".modal").iziModal();
 
-                $(document).on('click', '#trigger', function(event) {
+                $(document).on('click', '#logOut', function(event) {
                     event.preventDefault();
                     $('.modal').iziModal('open');
                 });
