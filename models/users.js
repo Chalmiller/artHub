@@ -8,11 +8,7 @@ var sequelize = require("../config/connection.js");
 
 var users = function (sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
-    screenname: Sequelize.STRING,
-    uploads:
-    {
-      type: Sequelize.STRING,
-    },
+    imgURL: Sequelize.STRING,
     createdAt: {
       type: Sequelize.DATE,
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
