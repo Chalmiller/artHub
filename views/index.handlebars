@@ -32,6 +32,14 @@
                 <div class="u">u</div>
                 <div class="b">b</div>
             </div>
+            <div class="art-display">
+                {{#each users}}
+                    <p class="thumbnails">
+                    {{this.id}}. {{this.screenname}}
+                    {{> art/art-thumbnail}}
+                    </p>
+                {{/each}}
+            </div>
             <div id="typedText">
                 <div class="element0 nodisplay"></div>
                 <div class="element1 nodisplay"></div>
