@@ -6,17 +6,17 @@ function setup() {
 }
 
 function draw() {
-    background(51);
+    background(100);
     background(0);
     for (i = 0; i < systems.length; i++) {
         systems[i].run();
         systems[i].addParticle();
     }
     if (systems.length == 0) {
-        fill(255);
+        fill(204);
         textAlign(CENTER);
         textSize(32);
-        text("click mouse to add particle systems", width / 2, height / 2);
+        text("Begin Your System Crash", width / 2, height / 2);
     }
 }
 
@@ -27,10 +27,10 @@ function mousePressed() {
 
 // A simple Particle class
 var Particle = function(position) {
-    this.acceleration = createVector(0, 0.05);
-    this.velocity = createVector(random(-1, 1), random(-1, 0));
+    this.acceleration = createVector(0, 0.1);
+    this.velocity = createVector(random(-10, 10), random(-10, 10));
     this.position = position.copy();
-    this.lifespan = 255.0;
+    this.lifespan = 500.0;
 };
 
 Particle.prototype.run = function() {
@@ -47,10 +47,10 @@ Particle.prototype.update = function() {
 
 // Method to display
 Particle.prototype.display = function() {
-    stroke(200, this.lifespan);
+    stroke(1000, this.lifespan);
     strokeWeight(2);
-    fill(127, this.lifespan);
-    ellipse(this.position.x, this.position.y, 12, 12);
+    fill(204, 102, 100);
+    ellipse(this.position.x, this.position.y, 5, 5);
 };
 
 // Is the particle still useful?
@@ -82,7 +82,7 @@ ParticleSystem.prototype.run = function() {
         var p = this.particles[i];
         p.run();
         if (p.isDead()) {
-            this.particles.splice(i, 1);
+            this.particles.splice(i, 10);
         }
     }
 };
@@ -115,7 +115,7 @@ CrazyParticle.prototype.constructor = CrazyParticle;
 CrazyParticle.prototype.update = function() {
     Particle.prototype.update.call(this);
     // Increment rotation based on horizontal velocity
-    this.theta += (this.velocity.x * this.velocity.mag()) / 10.0;
+    this.theta += (this.velocity.x * this.velocity.mag()) / 50.0;
 }
 
 // This display() method overrides the parent class display() method
@@ -126,7 +126,7 @@ CrazyParticle.prototype.display = function() {
     push();
     translate(this.position.x, this.position.y);
     rotate(this.theta);
-    stroke(255, this.lifespan);
-    line(0, 0, 25, 0);
+    stroke(300, this.lifespan);
+    line(10, 10, 25, 10);
     pop();
 }
