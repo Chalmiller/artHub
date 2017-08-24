@@ -4,6 +4,14 @@
         <a href="https://github.com/dolce/iziModal" id="browseArt">Browse Art</a>
 
         <div id="columns">
+        <div class="art-display">
+                {{#each users}}
+                    <p class="thumbnails">
+                    {{this.id}}. {{this.screenname}}
+                    {{> art/art-thumbnail}}
+                    </p>
+                {{/each}}
+            </div>
   <figure>
   <img src="public/assets/images/img#1.jpg" width="100" height="100">
   <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
@@ -28,26 +36,6 @@
    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
   <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
   </figure>
-
-   <!-- <figure>
-   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg">
-  <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-  </figure>
-
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg">
-  <figcaption>Snow White, based on 16th century German fashion</figcaption>
-  </figure>
-
-   <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg">
-  <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
-  </figure>
-
-    <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg">
-    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
-  </figure> -->
   </div>
         <!-- Modal structure for login -->
         <!--<div id="modal">
@@ -78,14 +66,6 @@
                 <div class="H">H</div>
                 <div class="u">u</div>
                 <div class="b">b</div>
-            </div>
-            <div class="art-display">
-                {{#each users}}
-                    <p class="thumbnails">
-                    {{this.id}}. {{this.screenname}}
-                    {{> art/art-thumbnail}}
-                    </p>
-                {{/each}}
             </div>
             <div id="typedText">
                 <div class="element0 nodisplay"></div>
