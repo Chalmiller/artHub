@@ -103,96 +103,43 @@
                     });
                 }, 6000);
 
-
-                $("#modal").iziModal();
-
-                $(document).on('click', '#trigger', function (event) {
-                    event.preventDefault();
-                    $('#modal').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function (event) {
-                    event.preventDefault();
-                    $('#modal').iziModal('close');
-                });
-
+                //  try us on click
                 $(".modal").iziModal();
 
-                $(document).on('click', '#logOut', function(event) {
+                $(document).on('click', '#tryUs', function (event) {
                     event.preventDefault();
                     $('.modal').iziModal('open');
                 });
 
-                $(document).on('click', '.close', function(event) {
+                $(document).on('click', '.close', function (event) {
                     event.preventDefault();
                     $('.modal').iziModal('close');
+                });
+                //  browse art on click
+                $("#columns").iziModal();
+
+                $(document).on('click', '#browseArt', function(event) {
+                    event.preventDefault();
+                    $('#columns').iziModal('open');
+                });
+
+                $(document).on('click', '.close', function(event) {
+                    event.preventDefault();
+                    $('#columns').iziModal('close');
                 });
                 $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
                 })
-
-                //------------OAuth---------------//
-                //Function called for login/out button listener
-                //  function toggleSignIn() {
-                //   if (!firebase.auth().currentUser) {
-                //     var provider = new firebase.auth.GoogleAuthProvider();
-                //     provider.addScope('profile');
-                //     firebase.auth().signInWithPopup(provider).then(function(result) {
-                //       //Gives Google access token
-                //       var token = result.credential.accessToken;
-                //       var user = result.user;
-
-                //     }).catch(function(error) {
-                //       //REcords errors for clarity
-                //       var errorCode = error.code;
-                //       var errorMessage = error.message;
-                //       var email = error.email;
-                //       var credential = error.credential;
-                //       if (errorCode === 'auth/account-exists-with-different-credential') {
-                //         alert('You have already signed up with a different auth provider for that email.');
-
-                //       } else {
-                //         console.error(error);
-                //       }
-
-                //     });
-
-                //   } else {
-                //     // firebase.auth().signOut();
-                //     firebase.auth().signOut().then(function() {
-                //     console.log('Signed Out');
-                // }, function(error) {
-                //     console.error('Sign Out Error', error);
-                // });
-
-                //   }
-
-                //   document.getElementById('trigger').disabled = true;
-
-                // }
-                // //Called on page/window load to add listener to UI
-                // function initApp(database) {
-                //   //Listens for state changes
-                //   firebase.auth().onAuthStateChanged(function(user) {
-                //     if (user) {
-
-                //       window.user = user;
-
-                //       document.getElementById('trigger').textContent = 'Sign out';
-
-                //       getData(database);
-                //     } else {
-                //       window.user = null
-
-                //       document.getElementById('trigger').textContent = 'Sign in with Google';
-                //     }
-                //     document.getElementById('trigger').disabled = false;
-                //   });
-
-                //   document.getElementById('trigger').addEventListener('click', toggleSignIn, false);
-                // }
-
+                // SUBMIT ART TO CLOUDINARY
+                var subOptions = {};
+                // $(document).on('click', '.art-submit', (event) => {
+                //     event.preventDefault();
+                //     console.log("Saving...")
+                    // cloudinary.v2.uploader.upload(userPiece, {subOptions}, (error, result) => {
+                    //   console.log(result);
+                    // });
+                // })
             });
         </script>
   </body>
