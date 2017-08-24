@@ -9,7 +9,7 @@ var current;
 var previous;
 
 function setup() {
-    createCanvas(720, 400);
+    createCanvas(500, 500);
     current = createVector(0, 0);
     previous = createVector(0, 0);
 };
@@ -32,7 +32,7 @@ function draw() {
         paths[paths.length - 1].add(current, force);
 
         // Schedule next circle
-        next = millis() + random(100);
+        next = millis() + random(1);
 
         // Store mouse values
         previous.x = current.x;
@@ -63,7 +63,7 @@ function mouseReleased() {
 // A Path is a list of particles
 function Path() {
     this.particles = [];
-    this.hue = random(100);
+    this.hue = random(1000);
 }
 
 Path.prototype.add = function(position, force) {
@@ -84,7 +84,7 @@ Path.prototype.display = function() {
     // Loop through backwards
     for (var i = this.particles.length - 1; i >= 0; i--) {
         // If we shold remove it
-        if (this.particles[i].lifespan <= 0) {
+        if (this.particles[i].lifespan <= 1) {
             this.particles.splice(i, 1);
             // Otherwise, display it
         } else {
@@ -98,8 +98,8 @@ Path.prototype.display = function() {
 function Particle(position, force, hue) {
     this.position = createVector(position.x, position.y);
     this.velocity = createVector(force.x, force.y);
-    this.drag = 0.95;
-    this.lifespan = 255;
+    this.drag = 1;
+    this.lifespan = 500;
 }
 
 Particle.prototype.update = function() {
@@ -115,7 +115,7 @@ Particle.prototype.update = function() {
 // Draw a line to another
 Particle.prototype.display = function(other) {
     stroke(0, this.lifespan);
-    fill(0, this.lifespan / 2);
+    fill(204, 102, 100);
     ellipse(this.position.x, this.position.y, 8, 8);
     // If we need to draw a line
     if (other) {
