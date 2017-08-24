@@ -10,17 +10,16 @@ var db = require("../models");
 module.exports = function(app) {
   //POST Methods
   app.post("/", function(req, res){
-    console.log("---------req.body-----")
+    console.log("Posting img from api-routes")
     console.log(req.body);
-    db.Users.create({
-      //POST AND CREATE FUNCTIONS
-    }).then(function (dbUsers){
-      var hbsObject = {
-        userinfo: dbUsers
-      };
-      console.log(hbsObject)
-      res.redirect("/");
-    })
+    // db.Users.create({
+    //   //POST AND CREATE FUNCTIONS
+    // }).then(function (dbUsers){
+    //   var hbsObject = {
+    //     userinfo: dbUsers
+    //   };
+    //   console.log(hbsObject)
+    // })
   });
   //PUT Methods
   app.put("/:id", function(req, res) {
