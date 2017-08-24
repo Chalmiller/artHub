@@ -52,14 +52,12 @@
                 <div class="dropdown">
                     <button id="dropbtn" class="modal-title">Add Drawing</button>
                     <div class="dropdown-content">
-                        <p><button>Brush</button></p>
-                        <p><button>Erase</button></p>
-                        <p><button>Fill with color</button></p>
-                        <p><button>Text</button></p>
+                        <p><button id='drawShapes'>Draw Shapes</button></p>
+                        <p><button id='frequencyOsc'>Frequency Oscillation</button></p>
+                        <p><button id="drawPath">Draw Path</button></p>
+                        <p><button id='particles'>Text</button></p>
                     </div>
                 </div>
-
-
                 <div class="dropdownVideo">
                     <button id="dropbtn" class="modal-title">Add Video</button>
                     <div class="dropdown-video">
@@ -67,8 +65,6 @@
                         <p><button>Stop</button></p>
                     </div>
                 </div>
-
-
                 <div class="dropdownVoice">
                     <button id="dropbtn" class="modal-title">Add Voice</button>
                     <div class="dropdown-voice">
@@ -79,6 +75,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
+            </div>
+            <div class="modal-body">
+                <iframe id = 'insertFunction'></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Reset</button>
