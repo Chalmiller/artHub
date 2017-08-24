@@ -1,97 +1,91 @@
 <body>
     <header>
-
         <a href="https://github.com/dolce/iziModal" id="trigger">LogIn</a>
         <a href="https://github.com/dolce/iziModal" id="logOut">LogOut</a>
         <!-- Modal structure for login -->
         <div id="modal">
         <!-- Page content -->
-        <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-        <div id="loginWrapper">
-        <i class="icomoon icon-google-plus"></i>
-        <button class="google">Sign in with Google</button>
-        </div>
-        </div>
-      </div>
-</div>
-  </header>
-  <div class="container">
-  <div class="img">
-    <img src="assets/images/trippy.gif" width="200" height="200">
-    </div>
-
-    <div id="wrapper">
-      <div id="letters">
-        <div class="a">a</div>
-        <div class="r">r</div>
-        <div class="t">t</div>
-        <div class="H">H</div>
-        <div class="u">u</div>
-        <div class="b">b</div>
-    </div>
-    <div id="typedText">
-    <div class="element0 nodisplay"></div>
-    <div class="element1 nodisplay"></div>
-    <div class="element2 nodisplay"></div>
-    <div class="element3 nodisplay"></div>
-    </div>
-        </div>
-        </div>
-        <div class="modal">
-            <!-- <div class="modal-dialog" role="document"> -->
             <div class="modal-content">
-                <div class="modal-header2">
-                    <div class="dropdown">
-                        <button id="dropbtn" class="modal-title">Add Drawing</button>
-                        <div class="dropdown-content">
-                            <p><button>Brush</button></p>
-                            <p><button>Erase</button></p>
-                            <p><button>Fill with color</button></p>
-                            <p><button>Text</button></p>
-                        </div>
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+                <div id="loginWrapper">
+                    <i class="icomoon icon-google-plus"></i>
+                    <button class="google">Sign in with Google</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+  <div class="container">
+        <div class="img">
+            <img src="assets/images/trippy.gif" width="200" height="200">
+        </div>
+        <div id="wrapper">
+            <div id="letters">
+                <div class="a">a</div>
+                <div class="r">r</div>
+                <div class="t">t</div>
+                <div class="H">H</div>
+                <div class="u">u</div>
+                <div class="b">b</div>
+            </div>
+            <div class="art-display">
+                {{#each users}}
+                    <p class="thumbnails">
+                    {{this.id}}. {{this.screenname}}
+                    {{> art/art-thumbnail}}
+                    </p>
+                {{/each}}
+            </div>
+            <div id="typedText">
+                <div class="element0 nodisplay"></div>
+                <div class="element1 nodisplay"></div>
+                <div class="element2 nodisplay"></div>
+                <div class="element3 nodisplay"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header2">
+                <div class="dropdown">
+                    <button id="dropbtn" class="modal-title">Add Drawing</button>
+                    <div class="dropdown-content">
+                        <p><button>Brush</button></p>
+                        <p><button>Erase</button></p>
+                        <p><button>Fill with color</button></p>
+                        <p><button>Text</button></p>
                     </div>
-
-
-                    <div class="dropdownVideo">
-                        <button id="dropbtn" class="modal-title">Add Video</button>
-                        <div class="dropdown-video">
-                            <p><button>Record</button></p>
-                            <p><button>Stop</button></p>
-                        </div>
-                    </div>
-
-
-                    <div class="dropdownVoice">
-                        <button id="dropbtn" class="modal-title">Add Voice</button>
-                        <div class="dropdown-voice">
-                            <p><button>Record</button></p>
-                            <p><button>Stop</button></p>
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
                 </div>
 
 
+                <div class="dropdownVideo">
+                    <button id="dropbtn" class="modal-title">Add Video</button>
+                    <div class="dropdown-video">
+                        <p><button>Record</button></p>
+                        <p><button>Stop</button></p>
+                    </div>
+                </div>
 
-            </div>
-            <div class="modal-body">
-                <img src="assets/images/art.jpg" width="100%" height="100%">
+
+                <div class="dropdownVoice">
+                    <button id="dropbtn" class="modal-title">Add Voice</button>
+                    <div class="dropdown-voice">
+                        <p><button>Record</button></p>
+                        <p><button>Stop</button></p>
+                    </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Reset</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
             </div>
-            <!-- </div> -->
         </div>
-        </div>
-
+    </div>
 </body>
-
-</html>
