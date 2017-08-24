@@ -1,19 +1,5 @@
-iframe {
-    max-width: 800px;
-    max-height: 800px
-}
-#insertFunction {
-    max-width: 800px;
-    max-height: 800px
-}
-
 .dropdown-menu {
     position: absolute;
-}
-
-#drawShapes {
-  position: relative;
-  text-align: center;
 }
 
 .dropdown-item {
