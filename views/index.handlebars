@@ -49,10 +49,10 @@
                     <div class="dropdown">
                         <button id="dropbtn" class="modal-title">Add Drawing</button>
                         <div class="dropdown-content">
-                            <p><button>Brush</button></p>
-                            <p><button>Erase</button></p>
-                            <p><button>Fill with color</button></p>
-                            <p><button>Text</button></p>
+                            <p><button id='drawShapes'>Draw Shapes</button></p>
+                            <p><button id='frequencyOsc'>Frequency Oscillation</button></p>
+                            <p><button id="drawPath">Draw Path</button></p>
+                            <p><button id='particles'>Text</button></p>
                         </div>
                     </div>
 
@@ -83,10 +83,11 @@
             </div>
             <div class="modal-body">
                 <img src="assets/images/art.jpg" width="100%" height="100%">
+                <iframe id = 'insertFunction'></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Reset</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
+                <button id ='imageSave' type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
             </div>
             <!-- </div> -->
         </div>
