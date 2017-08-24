@@ -26,6 +26,33 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
       {{!-- TYPED.JS INFO --}}
        <script>
+            $(document).on('click', '#drawShapes', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                    $( "#insertFunction" ).attr( "width", "760px" );
+                    $( "#insertFunction" ).attr( "width", "760px" );
+                });
+            $(document).on('click', '#frequencyOsc', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/frequencyOscillation/oscillateFrequencyIndex.html" );
+                });
+            $(document).on('click', '#drawPath', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/drawPath/drawPath.html" );
+                });
+            $(document).on('click', '#particles', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "public/particleSystem/particleIndex.html" );
+                });
+            $(document).on('click', '#imageSave', function(event) {
+                    var iframe = document.getElementsByTagName("iframe").insertFunction.contentWindow;
+                    console.log(iframe)
+                    var x = iframe.contentWindow;
+                    var canvas = document.getElementById('#defaultCanvas0');
+                    x.postMessage(canvas, document);
+                    var dataURL = canvas.toDataURL();
+                    console.log(image);
+                });
             $(document).ready(function() {
                 console.log('ready');
                 setTimeout(function() {
