@@ -150,7 +150,7 @@
                     $( "#insertFunction" ).attr( "src", "public/particleSystem/particleIndex.html" );
                 });
             $(document).on('click', '#imageSave', function(event) {
-                    var iframe = document.getElementsByTagName("iframe").insertFunction.contentWindow;
+                    var iframe = document.getElementsByTagName("iframe").insertFunction.contentWindow.window;
                     console.log(iframe)
                     var x = iframe.contentWindow;
                     var canvas = document.getElementById('#defaultCanvas0');
