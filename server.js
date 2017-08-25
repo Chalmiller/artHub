@@ -10,7 +10,6 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
-// var cloudinfo = require(__dirname + "./apikey/keys.js")
 
 // Serve static content for the app from the "asset" directory in the application directory.
 

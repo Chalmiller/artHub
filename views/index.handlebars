@@ -2,57 +2,6 @@
     <header class="header">
         <a href="https://github.com/dolce/iziModal" id="tryUs">Try Us</a>
         <a href="https://github.com/dolce/iziModal" id="browseArt">Browse Art</a>
-
-        <div id="columns">
-        <div class="art-display">
-                {{#each users}}
-                    <p class="thumbnails">
-                    {{this.id}}. {{this.screenname}}
-                    {{> art/art-thumbnail}}
-                    </p>
-                {{/each}}
-            </div>
- <!--  <figure>
-  <img src="../../public/assets/images/img#1.jpg" width="100" height="100">
-  <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
-  </figure> -->
-
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg" width="100px" height="100px">
-  <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
-  </figure>
-
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg">
-  <figcaption>Belle, based on 1770’s French court fashion</figcaption>
-  </figure>
-
-  <figure>
-  <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg">
-  <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
-  </figure>
-
-   <figure>
-   <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
-  <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-  </figure>
-  </div>
-        <!-- Modal structure for login -->
-        <!--<div id="modal">
-         Page content
-            <div class="modal-content">
-            <div class="modal-header" style="padding:35px 50px;">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-            </div>
-            <div class="modal-body" style="padding:40px 50px;">
-                <div id="loginWrapper">
-                    <i class="icomoon icon-google-plus"></i>
-                    <button class="google">Sign in with Google</button>
-                </div>
-            </div>
-            </div>
-        </div> -->
     </header>
     <div class="img">
         <img src="assets/images/trippy.gif" width="200" height="200">
@@ -74,7 +23,7 @@
         </div>
     </div>
     <div id="columns">
-        {{#each users}}
+        {{#each Users}}
             {{> art/art-thumbnail}}
         {{/each}}
         <figure>
@@ -106,20 +55,6 @@
                         <p><button id='particles'>Particles</button></p>
                     </div>
                 </div>
-               <!--  <div class="dropdownVideo">
-                    <button id="dropbtn" class="modal-title">Add Video</button>
-                    <div class="dropdown-video">
-                        <p><button>Record</button></p>
-                        <p><button>Stop</button></p>
-                    </div>
-                </div>
-                <div class="dropdownVoice">
-                    <button id="dropbtn" class="modal-title">Add Voice</button>
-                    <div class="dropdown-voice">
-                        <p><button>Record</button></p>
-                        <p><button>Stop</button></p>
-                    </div>
-                </div> -->
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -128,7 +63,6 @@
                 <iframe id = 'insertFunction'></iframe>
             </div>
             <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-primary">Reset</button> -->
                 <form actions="/" method="POST">
                     <button type="submit" class="btn btn-secondary art-submit" data-dismiss="modal"> Save </button>
                 </form>
