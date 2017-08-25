@@ -31,13 +31,9 @@
             // });
             $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();
-                    // console.log("clicked");
-                    // $.get('/drawShapes', function(res) {
-                    //   console.log("trying to request drawShapes function")
-                    // })
                     $( "#insertFunction" ).attr( "src", "/drawShapes" );
-                    // $( "#insertFunction" ).attr( "width", "760px" );
-                    // $( "#insertFunction" ).attr( "width", "760px" );
+                    $( "#insertFunction" ).attr( "width", "760px" );
+                    $( "#insertFunction" ).attr( "width", "760px" );
                 });
             $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
@@ -99,19 +95,6 @@
                     event.preventDefault();
                     $('#columns').iziModal('close');
                 });
-                // $(document).on('click', '#drawShapes', function(event) {
-                //     event.preventDefault();
-                //     $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
-                // })
-                // SUBMIT ART TO CLOUDINARY
-                var subOptions = {};
-                // $(document).on('click', '.art-submit', (event) => {
-                //     event.preventDefault();
-                //     console.log("Saving...")
-                    // cloudinary.v2.uploader.upload(userPiece, {subOptions}, (error, result) => {
-                    //   console.log(result);
-                    // });
-                // })
             });
         </script>
   </body>
