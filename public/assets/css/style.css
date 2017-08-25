@@ -2,15 +2,16 @@
     position: absolute;
 }
 
-#drawShapes {
+/*#drawShapes {
   position: relative;
   text-align: center;
-}
+}*/
 
 .dropdown-item {
   position: relative;
   text-align: center;
 }
+
 
 html {
     height: 100%;
@@ -24,18 +25,6 @@ body {
     font-family: 'Rubik', sans-serif;
     background-color: #f5f5f5;
 }
-/*#login {
-  text-align: right;
-  margin-right: 200px;
-}*/
-/*.btn {
-  font-family: 'Rubik', sans-serif;
-  background-color: #000000;
-  width: 200px;
-  height: 50px;
-  color: #ffffff;
-}
-*/
 
 .modal-header,
 h4,
@@ -148,9 +137,9 @@ a {
 }
 .modal-body {
     text-align: center;
-    border-style: solid;
+    /*border-style: solid;
     border-width: 0.2px;
-    border-color: #000000;
+    border-color: #000000;*/
 }
 /*.modal-title {
   display: inline;
@@ -178,8 +167,7 @@ a {
 }
 .btn.btn-secondary {
     font-size: 20px;
-    float: right;
-    margin-top: 20px;
+    margin-right: 30px;
     background-color: #dddddd;
     color: #263d42;
     font-family: 'Rubik', sans-serif;
@@ -193,7 +181,10 @@ a {
     background-color: #000000;
 }
 /*style for add drawing*/
+#dropbtn {
+  border-radius: 4px;
 
+}
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -205,12 +196,14 @@ a {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 25px;
+    margin-left: 50px;
 }
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 118px;
+    min-width: 115px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     color: #000000;
@@ -222,9 +215,9 @@ a {
     font-size: 13px;
     font-family: 'Rubik', sans-serif;
 }
-.dropdown-content p:hover {
+/*.dropdown-content p:hover {
     background-color: #f1f1f1
-}
+}*/
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -232,9 +225,43 @@ a {
     background-color: #c0c5ce;
     /*color: #fff;*/
 }
-/*style for add video*/
 
-.dropdownVideo {
+#drawShapes {
+  border-style: none;
+  background-color: #fff;
+}
+#drawShapes:hover {
+  color: #087e8b;
+}
+
+#frequencyOsc {
+  border-style: none;
+  background-color: #fff;
+}
+
+#frequencyOsc:hover {
+  color: #087e8b;
+}
+
+#drawPath{
+  border-style: none;
+  background-color: #fff;
+}
+
+#drawPath:hover {
+  color: #087e8b;
+}
+/*style for add video*/
+#particles{
+  border-style: none;
+  background-color: #fff;
+}
+
+#particles:hover {
+  color: #087e8b;
+}
+
+/*.dropdownVideo {
     position: relative;
     display: inline-block;
 }
@@ -253,17 +280,17 @@ a {
     display: block;
     font-size: 13px;
     font-family: 'Rubik', sans-serif;
-}
-.dropdown-video p:hover {
+}*/
+/*.dropdown-video p:hover {
     background-color: #f1f1f1
-}
-.dropdownVideo:hover .dropdown-video {
+}*/
+/*.dropdownVideo:hover .dropdown-video {
     display: block;
 }
 .dropdownVideo:hover #dropbtn {
     background-color: #c0c5ce;
     /*color: #fff;*/
-}
+}*/
 /*style for add voice*/
 
 .dropdownVoice {
@@ -286,9 +313,9 @@ a {
     font-size: 13px;
     font-family: 'Rubik', sans-serif;
 }
-.dropdown-voice p:hover {
+/*.dropdown-voice p:hover {
     background-color: #f1f1f1
-}
+}*/
 .dropdownVoice:hover .dropdown-voice {
     display: block;
 }
@@ -303,7 +330,8 @@ a {
 .modal-title {
     margin-top: 25px;
     width: 118px;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
 }
 .close {
     margin: 20px;
@@ -366,7 +394,6 @@ div#columns figure figcaption {
   color: #444;
   line-height: 1.5;
 }
->>>>>>> upstream/master
 
 div#columns small {
   font-size: 1rem;
@@ -392,6 +419,13 @@ div#columns:hover figure:not(:hover) {
 
 .img{
     border-radius: 5px;
+}
+
+#insertFunction {
+  width: 500px;
+  height: 500px;
+  border-style: solid;
+  border-color: #828892;
 }
 
 /*@media (max-width:660px) {
