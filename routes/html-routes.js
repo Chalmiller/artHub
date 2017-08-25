@@ -15,7 +15,7 @@ module.exports = function(app) {
     db.Users.findAll({}).then(function(dbUsers){
       var hbsObject = {userinfo : dbUsers};
       console.log("handlebars object - ");
-      console.log(hbsObject.userinfo);
+      console.log(hbsObject);
       //Grabs index.handlebars in /views. Edit HTML there.
       res.render("index", hbsObject);
     })
