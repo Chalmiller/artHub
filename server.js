@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var path = require("path");
 var cloudinary = require('cloudinary');
+var keys = require('./config/apikey/keys.js')
+
 
 
 var app = express();
@@ -33,16 +35,11 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
-cloudinary.config({
-  cloud_name: 'arthub',
-  api_key: '372987164826464',
-  api_secret: 'ji3wD9IR2eIc9nWE4kmaR1Cmfr0'
-});
-
-// require("./controllers/burger-controller.js")(app);
 
 db.sequelize.sync({force:true}).then(function() {
   app.listen(process.env.PORT || PORT, function() {
     console.log("App listening on PORT " + PORT);
+    // console.log(keys);
+    cloudinary.config(keys.cloudinfo);
   });
 });

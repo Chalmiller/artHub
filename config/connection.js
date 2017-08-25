@@ -1,19 +1,15 @@
 //Almost certainly can remove the jawsDB part of this but leaving it until we settle on storage.
 
 var mysql = require('mysql');
+var keys = require('./apikey/keys.js')
+
 // var sqlConnect = require("./apikeys/keys.js");
 // Mysql
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  var connection = mysql.createConnection({
-    port: 3306,
-    host: "localhost",
-    user: "root",
-    password: "admin",
-    database: "Users_DB"
-});
+  var connection = mysql.createConnection(keys.sqlConnect);
 }
 
 

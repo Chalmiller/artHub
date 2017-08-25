@@ -1,9 +1,19 @@
 //Cloud Storage API
-var cloudinfo = {
-  cloud_name: 'arthub',
-  api_key: '372987164826464',
-  api_secret: 'a676b67565c6767a6767d6767f676fe1'
-};
+
+var keys = {
+  cloudinfo: {
+    cloud_name: 'arthub',
+    api_key: '372987164826464',
+    api_secret: 'ji3wD9IR2eIc9nWE4kmaR1Cmfr0'
+  },
+  sqlConnect: {
+    port: 3306,
+    host: "localhost",
+    user: "root",
+    password: "admin",
+    database: "Users_DB"
+  }
+}
 
 //SQL Connection info (only for local host)
 var sqlConnect = {
@@ -15,5 +25,4 @@ var sqlConnect = {
 };
 
 //Export 'em.
-module.exports = cloudinfo;
-module.exports = sqlConnect;
+module.exports = keys;

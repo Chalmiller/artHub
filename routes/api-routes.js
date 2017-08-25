@@ -12,10 +12,9 @@ module.exports = function(app) {
   //POST Methods
   app.post("/", function(req, res){
     console.log("Posting img from api-routes")
-    console.log(req.body.image);
+    // console.log(req.body.image);
     cloudinary.v2.uploader.upload(req.body.image, function(error, result) {
       if(!error) {
-        console.log(result);
         console.log(result.secure_url);
         db.Users.create({
           imgURL: result.secure_url
