@@ -1,7 +1,7 @@
 //Almost certainly can remove the jawsDB part of this but leaving it until we settle on storage.
 
 var mysql = require('mysql');
-var keys = require('./apikey/keys.js')
+// var keys = require('./apikey/keys.js');
 
 // var sqlConnect = require("./apikeys/keys.js");
 // Mysql
