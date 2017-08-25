@@ -36,12 +36,18 @@
                     //   console.log("trying to request drawShapes function")
                     // })
                     $( "#insertFunction" ).attr( "src", "/drawShapes" );
-                    // $( "#insertFunction" ).attr( "width", "760px" );
-                    // $( "#insertFunction" ).attr( "width", "760px" );
+                });
+            $(document).on('click', '#song', function(event) {
+                    event.preventDefault();
+                    // console.log("clicked");
+                    // $.get('/drawShapes', function(res) {
+                    //   console.log("trying to request drawShapes function")
+                    // })
+                    $( "#insertFunction" ).attr( "src", "/song" );
                 });
             $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "/freqOsc" );
+                    $( "#insertFunction" ).attr( "src", "/frequencyOsc" );
                 });
             $(document).on('click', '#drawPath', function(event) {
                     event.preventDefault();
