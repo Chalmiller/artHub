@@ -16,7 +16,8 @@ var db = require("./models");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
+app.use(bodyParser.text({type: 'text/html'}));
+// app.use(bodyParser.html());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(methodOverride("_method"));
 

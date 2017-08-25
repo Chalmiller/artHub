@@ -23,9 +23,9 @@
         </div>
     </div>
     <div id="columns">
-        {{#each users}}
+{{!--         {{#each users}}
         {{> art/art-thumbnail}}
-        {{/each}}
+        {{/each}} --}}
         <figure>
             <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg" width="100px" height="100px">
             <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
@@ -49,7 +49,10 @@
                 <div class="dropdown">
                     <button id="dropbtn" class="modal-title">Add Drawing</button>
                     <div class="dropdown-content">
-                        <p><button id='drawShapes'>Draw Shapes</button></p>
+                        <form action="/drawShapes" method="GET" class="funcForm">
+                            <input type="submit" {{!-- class="btn btn-secondary" --}}>
+                            {{!-- <p><button id='drawShapes'>Draw Shapes</button></p> --}}
+                        </form>
                         <p><button id='frequencyOsc'>Frequency Oscillation</button></p>
                         <p><button id="drawPath">Draw Path</button></p>
                         <p><button id='particles'>Text</button></p>

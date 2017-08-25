@@ -1,5 +1,6 @@
-// var express = require("express");
-// var router = express.Router();
+var express = require("express");
+var router = express.Router();
+var path = require('path');
 
 // Import the model to use its database functions.
 var db = require("../models");
@@ -18,5 +19,13 @@ module.exports = function(app) {
       //Grabs index.handlebars in /views. Edit HTML there.
       res.render("index", hbsObject);
     })
+  });
+  app.get("/drawShapes", function(req, res) {
+    console.log("requesting drawShapes function");
+    res.sendFile(path.join(__dirname, '/../public/drawShapes', 'drawindex.html'));
+    console.log("-------REQ------");
+    // console.log(req);
+    console.log("-------RES------");
+    console.log(res);
   });
 };

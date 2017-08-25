@@ -26,15 +26,22 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
       {{!-- TYPED.JS INFO --}}
        <script>
+            // $(document).on('click', '.funcForm', function(event) {
+            //   event.preventDefault();
+            // });
             $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
+                    console.log("clicked");
+                    // $.get('/drawShapes', function(res) {
+                    //   console.log("trying to request drawShapes function")
+                    // })
+                    // $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                    // $( "#insertFunction" ).attr( "width", "760px" );
+                    // $( "#insertFunction" ).attr( "width", "760px" );
                 });
             $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/frequencyOscillation/oscillateFrequencyIndex.html" );
+                    $( "#insertFunction" ).attr( "src", "../../public/frequencyOscillation/oscillateFrequencyIndex.html" );
                 });
             $(document).on('click', '#drawPath', function(event) {
                     event.preventDefault();
@@ -126,10 +133,10 @@
                     event.preventDefault();
                     $('#columns').iziModal('close');
                 });
-                $(document).on('click', '#drawShapes', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
-                })
+                // $(document).on('click', '#drawShapes', function(event) {
+                //     event.preventDefault();
+                //     $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                // })
                 // SUBMIT ART TO CLOUDINARY
                 var subOptions = {};
                 // $(document).on('click', '.art-submit', (event) => {
