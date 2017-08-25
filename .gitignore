@@ -1,5 +1,5 @@
 .DS_Store
-apikey/
+config/apikey/
 config.JSON
 
 # Logs
