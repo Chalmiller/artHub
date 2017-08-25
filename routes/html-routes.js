@@ -20,12 +20,26 @@ module.exports = function(app) {
       res.render("index", hbsObject);
     })
   });
+  // DRAW SHAPES
   app.get("/drawShapes", function(req, res) {
     console.log("requesting drawShapes function");
     res.sendFile(path.join(__dirname, '/../public/drawShapes', 'drawindex.html'));
-    console.log("-------REQ------");
-    // console.log(req);
-    console.log("-------RES------");
-    console.log(res);
   });
+  // FREQ OSC
+  app.get("/freqOsc", function(req, res) {
+    console.log("requesting freqOsc function");
+    res.sendFile(path.join(__dirname, '/../public/frequencyOscillation', 'oscillateFrequencyIndex.html'));
+
+  });
+  // DRAW PATH
+  app.get("/drawPath", function(req, res) {
+    console.log("requesting drawPath function");
+    res.sendFile(path.join(__dirname, '/../public/drawPath', 'drawPath.html'));
+  });
+  // PARTICLES
+  app.get("/particles", function(req, res) {
+    console.log("requesting particles function");
+    res.sendFile(path.join(__dirname, '/../public/particleSystem', 'particleIndex.html'));
+  });
+
 };

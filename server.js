@@ -38,7 +38,7 @@ require("./routes/html-routes.js")(app);
 cloudinary.config({
   cloud_name: 'arthub',
   api_key: '372987164826464',
-  api_secret: 'a676b67565c6767a6767d6767f676fe1'
+  api_secret: 'ji3wD9IR2eIc9nWE4kmaR1Cmfr0'
 });
 
 // require("./controllers/burger-controller.js")(app);
