@@ -26,25 +26,33 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
       {{!-- TYPED.JS INFO --}}
        <script>
+            // $(document).on('click', '.funcForm', function(event) {
+            //   event.preventDefault();
+            // });
             $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
+                    // console.log("clicked");
+                    // $.get('/drawShapes', function(res) {
+                    //   console.log("trying to request drawShapes function")
+                    // })
+                    $( "#insertFunction" ).attr( "src", "/drawShapes" );
+                    // $( "#insertFunction" ).attr( "width", "760px" );
+                    // $( "#insertFunction" ).attr( "width", "760px" );
                 });
             $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/frequencyOscillation/oscillateFrequencyIndex.html" );
+                    $( "#insertFunction" ).attr( "src", "/freqOsc" );
                 });
             $(document).on('click', '#drawPath', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/drawPath/drawPath.html" );
+                    $( "#insertFunction" ).attr( "src", "/drawPath" );
                 });
             $(document).on('click', '#particles', function(event) {
                     event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/particleSystem/particleIndex.html" );
+                    $( "#insertFunction" ).attr( "src", "/particles" );
                 });
             $(document).on('click', '#imageSave', function(event) {
+              cloudinary.v2.uploader.upload(myURI, function(error, result) {console.log(result); });
                     var iframe = document.getElementsByTagName("iframe").insertFunction.contentWindow;
                     console.log(iframe)
                     var x = iframe.contentWindow;
@@ -57,50 +65,15 @@
                 console.log('ready');
                 setTimeout(function() {
                     $(".element0").typed({
-                        strings: ["DRAW SOME SHIT"],
+                        strings: ["DRAW SOME SHIT", "DRAW SOME POOP"],
                         typeSpeed: 30, // typing speed
                         backDelay: 750, // pause before backspacing
-                        loop: false, // loop on or off (true or false)
+                        smartBackspace: true,
+                        loop: true, // loop on or off (true or false)
                         loopCount: false, // number of loops, false = infinite
                         callback: function() {} // call function after typing is done
                     });
                 }, 0);
-
-                setTimeout(function() {
-                    $(".element1").css("display", "inherit");
-                    $(".element1").typed({
-                        strings: ["SING SOME SHIT"],
-                        typeSpeed: 30, // typing speed
-                        backDelay: 750, // pause before backspacing
-                        loop: false, // loop on or off (true or false)
-                        loopCount: false, // number of loops, false = infinite
-                        callback: function() {} // call function after typing is done
-                    });
-                }, 2000);
-
-                setTimeout(function() {
-                    $(".element2").css("display", "inherit");
-                    $(".element2").typed({
-                        strings: ["MAKE YOUR OWN VIDEO"],
-                        typeSpeed: 30, // typing speed
-                        backDelay: 750, // pause before backspacing
-                        loop: false, // loop on or off (true or false)
-                        loopCount: false, // number of loops, false = infinite
-                        callback: function() {} // call function after typing is done
-                    });
-                }, 4000);
-
-                setTimeout(function() {
-                    $(".element3").css("display", "inherit");
-                    $(".element3").typed({
-                        strings: ["SHARE IT WITH FRIENDS"],
-                        typeSpeed: 30, // typing speed
-                        backDelay: 750, // pause before backspacing
-                        loop: false, // loop on or off (true or false)
-                        loopCount: false, // number of loops, false = infinite
-                        callback: function() {} // call function after typing is done
-                    });
-                }, 6000);
 
                 //  try us on click
                 $(".modal").iziModal();
@@ -126,10 +99,10 @@
                     event.preventDefault();
                     $('#columns').iziModal('close');
                 });
-                $(document).on('click', '#drawShapes', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
-                })
+                // $(document).on('click', '#drawShapes', function(event) {
+                //     event.preventDefault();
+                //     $( "#insertFunction" ).attr( "src", "public/drawShapes/drawindex.html" );
+                // })
                 // SUBMIT ART TO CLOUDINARY
                 var subOptions = {};
                 // $(document).on('click', '.art-submit', (event) => {

@@ -16,7 +16,8 @@ var db = require("./models");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
+app.use(bodyParser.text({type: 'text/html'}));
+// app.use(bodyParser.html());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(methodOverride("_method"));
 
@@ -37,7 +38,7 @@ require("./routes/html-routes.js")(app);
 cloudinary.config({
   cloud_name: 'arthub',
   api_key: '372987164826464',
-  api_secret: 'a676b67565c6767a6767d6767f676fe1'
+  api_secret: 'ji3wD9IR2eIc9nWE4kmaR1Cmfr0'
 });
 
 // require("./controllers/burger-controller.js")(app);
