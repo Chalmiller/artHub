@@ -40,6 +40,6 @@ db.sequelize.sync({force:true}).then(function() {
   app.listen(process.env.PORT || PORT, function() {
     console.log("App listening on PORT " + PORT);
     // console.log(keys);
-    cloudinary.config(keys.cloudinfo);
+    cloudinary.config(process.env.CLOUDINARY_URL);
   });
 });
