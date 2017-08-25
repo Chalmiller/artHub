@@ -26,39 +26,14 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
       {{!-- TYPED.JS INFO --}}
        <script>
-            // $(document).on('click', '.funcForm', function(event) {
-            //   event.preventDefault();
-            // });
-            $(document).on('click', '#drawShapes', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "/drawShapes" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
-                    $( "#insertFunction" ).attr( "width", "760px" );
-                });
-            $(document).on('click', '#frequencyOsc', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "/freqOsc" );
-                });
-            $(document).on('click', '#drawPath', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "/drawPath" );
-                });
-            $(document).on('click', '#particles', function(event) {
-                    event.preventDefault();
-                    $( "#insertFunction" ).attr( "src", "/particles" );
-                });
             $(document).on('click', '#imageSave', function(event) {
                     event.preventDefault();
                     var iframe = document.getElementById('insertFunction');
                     var innerDoc = iframe.contentWindow.document;
                     var innerDocCanvas = innerDoc.getElementById('defaultCanvas0');
                     console.log("Inner doc canvas", innerDoc.getElementById('defaultCanvas0'))
-                    // var x = innerDoc.document.getElementsByTagName('canvas')
-                    // console.log(x)
                     var canvas = innerDocCanvas.toDataURL();
-                    console.log(canvas)
                     $.post("/", {"image" : canvas});
-                //     cloudinary.v2.uploader.upload(canvas, function(error, result) {console.log(result); });
                 });
             $(document).ready(function() {
                 console.log('ready');
@@ -75,16 +50,20 @@
                 }, 0);
 
                 //  try us on click
-                $(".modal").iziModal();
+                $(".canvas-modal").iziModal({
+                    width: 950,
+                    height: 800,
+                    bodyOverflow: true
+                });
 
                 $(document).on('click', '#tryUs', function (event) {
                     event.preventDefault();
-                    $('.modal').iziModal('open');
+                    $('.canvas-modal').iziModal('open');
                 });
 
                 $(document).on('click', '.close', function (event) {
                     event.preventDefault();
-                    $('.modal').iziModal('close');
+                    $('.canvas-modal').iziModal('close');
                 });
                 //  browse art on click
                 $("#columns").iziModal();
@@ -97,6 +76,28 @@
                 $(document).on('click', '.close', function(event) {
                     event.preventDefault();
                     $('#columns').iziModal('close');
+                });
+
+                // P5 FUNCTIONS
+                $(document).on('click', '#drawShapes', function(event) {
+                    event.preventDefault();
+                    console.log("clicked drawShapes");
+                    $( "#insertFunction" ).attr( "src", "/drawShapes" );
+                });
+
+                $(document).on('click', '#frequencyOsc', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/freqOsc" );
+                });
+
+                $(document).on('click', '#drawPath', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/drawPath" );
+                });
+
+                $(document).on('click', '#particles', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/particles" );
                 });
             });
         </script>

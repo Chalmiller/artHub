@@ -72,12 +72,18 @@ a {
     border-radius: 5px;
     /*position: fixed;*/
 }
+
+img {
+  overflow: hidden;
+  border-radius: 40px;
+}
+
 .element0.nodisplay {
     font-family: 'Rubik', sans-serif;
     font-size: 35px;
     color: #087e8b;
 }
-.element1.nodisplay {
+/*.element1.nodisplay {
     font-family: 'Rubik', sans-serif;
     font-size: 35px;
     color: #087e8b;
@@ -101,7 +107,7 @@ a {
     font-family: 'Rubik', sans-serif;
     font-size: 35px;
     color: #087e8b;
-}
+}*/
 #typedText {
     text-align: center;
     margin-top: 200px;
@@ -130,6 +136,7 @@ a {
     color: #debe65;
     font-family: 'Rubik', sans-serif;
     margin-left: 40px;
+
 }
 #tryUs:hover {
     color: #000000;
@@ -141,6 +148,7 @@ a {
     border-width: 0.2px;
     border-color: #000000;*/
 }
+
 /*.modal-title {
   display: inline;
   padding: 10px;
@@ -183,22 +191,28 @@ a {
 /*style for add drawing*/
 #dropbtn {
   border-radius: 4px;
+  color: white;
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  /*margin-left: -48px;*/
+  /*margin-top: -10px;*/
 
 }
-.dropbtn {
+/*.dropbtn {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
+}*/
 .dropdown {
     position: relative;
-    display: inline-block;
-    margin-top: 25px;
-    margin-left: 50px;
+    width: 51px;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -215,9 +229,7 @@ a {
     font-size: 13px;
     font-family: 'Rubik', sans-serif;
 }
-/*.dropdown-content p:hover {
-    background-color: #f1f1f1
-}*/
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -226,38 +238,11 @@ a {
     /*color: #fff;*/
 }
 
-#drawShapes {
+.func-btn {
   border-style: none;
   background-color: #fff;
 }
-#drawShapes:hover {
-  color: #087e8b;
-}
-
-#frequencyOsc {
-  border-style: none;
-  background-color: #fff;
-}
-
-#frequencyOsc:hover {
-  color: #087e8b;
-}
-
-#drawPath{
-  border-style: none;
-  background-color: #fff;
-}
-
-#drawPath:hover {
-  color: #087e8b;
-}
-/*style for add video*/
-#particles{
-  border-style: none;
-  background-color: #fff;
-}
-
-#particles:hover {
+.func-btn:hover {
   color: #087e8b;
 }
 
@@ -327,12 +312,17 @@ a {
     background-color: #087e8b;
     height: 80px;
 }
-.modal-title {
+/*.modal-title {
     margin-top: 25px;
     width: 118px;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
+}*/
+
+#iframe-header {
+  background-color: #087e8b;
 }
+
 .close {
     margin: 20px;
 }
@@ -417,15 +407,9 @@ div#columns:hover figure:not(:hover) {
   #columns figure { width: 100%; }
 }
 
-.img{
-    border-radius: 5px;
-}
-
-#insertFunction {
-  width: 500px;
-  height: 500px;
-  border-style: solid;
-  border-color: #828892;
+#insertFunction{
+  height: 370px;
+  margin-left: 115px;
 }
 
 /*@media (max-width:660px) {
