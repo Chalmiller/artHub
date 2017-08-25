@@ -13,8 +13,7 @@ var db = require("./models");
 
 // Serve static content for the app from the "asset" directory in the application directory.
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(bodyParser.text({type: 'text/html'}));
 // app.use(bodyParser.html());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
