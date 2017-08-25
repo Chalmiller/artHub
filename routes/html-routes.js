@@ -41,5 +41,9 @@ module.exports = function(app) {
     console.log("requesting particles function");
     res.sendFile(path.join(__dirname, '/../public/particleSystem', 'particleIndex.html'));
   });
+  app.get("/iframe", function(req, res) {
+    console.log("requesting image");
+    res.sendFile(path.join(__dirname, '/../views/layouts', 'index.html'));
+  });
 
 };
