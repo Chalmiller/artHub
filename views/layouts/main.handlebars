@@ -48,14 +48,19 @@
                     $( "#insertFunction" ).attr( "src", "/particles" );
                 });
             $(document).on('click', '#imageSave', function(event) {
-              cloudinary.v2.uploader.upload(myURI, function(error, result) {console.log(result); });
-                    var iframe = document.getElementsByTagName("iframe").insertFunction.contentWindow;
-                    console.log(iframe)
-                    var x = iframe.contentWindow;
-                    var canvas = document.getElementById('#defaultCanvas0');
-                    x.postMessage(canvas, document);
-                    var dataURL = canvas.toDataURL();
-                    console.log(image);
+                    event.preventDefault();
+                    var iframe = document.getElementById('insertFunction');
+                    var innerDoc = iframe.contentWindow.document;
+                    var innerDocCanvas = innerDoc.getElementById('defaultCanvas0');
+                    console.log("Inner doc canvas", innerDoc.getElementById('defaultCanvas0'))
+                    // var x = innerDoc.document.getElementsByTagName('canvas')
+                    // console.log(x)
+                    var canvas = innerDocCanvas.toDataURL()
+                    console.log(canvas)
+                    // innderDoc.postMessage(image, canvas);
+                    // var dataURL = image.toDataURL();
+                    // console.log(image);
+                    cloudinary.v2.uploader.upload(canvas, function(error, result) {console.log(result); });
                 });
             $(document).ready(function() {
                 console.log('ready');
