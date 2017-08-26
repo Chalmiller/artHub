@@ -19,7 +19,7 @@ module.exports = function(app) {
         console.log(result);
         console.log(result.secure_url);
         db.Users.create({
-          // imgURL: 
+          // imgURL:
         })
       } else {
         console.log(error);
