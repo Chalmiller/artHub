@@ -1,6 +1,5 @@
 .DS_Store
 apikey/
-config.JSON
 
 # Logs
 logs

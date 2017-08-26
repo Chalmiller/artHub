@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "admin",
     "database": "Users_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,11 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable" : "",
+    "use_env_variable" : "JAWSDB_URL",
     "username": "",
     "password": "",
     "database": "database_production",
-    "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "host": "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
