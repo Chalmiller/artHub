@@ -38,6 +38,7 @@
                     $( "#insertFunction" ).attr( "src", "/drawShapes" );
                 });
             $(document).on('click', '#song', function(event) {
+                    console.log('clicked song')
                     event.preventDefault();
                     // console.log("clicked");
                     // $.get('/drawShapes', function(res) {
@@ -45,15 +46,28 @@
                     // })
                     $( "#insertFunction" ).attr( "src", "/song" );
                 });
+            $(document).on('click', '#trippyGuy', function(event) {
+                    event.preventDefault();
+                    // console.log("clicked");
+                    // $.get('/drawShapes', function(res) {
+                    //   console.log("trying to request drawShapes function")
+                    // })
+                    $( "#insertFunction" ).attr( "src", "/trippyGuy" );
+                });
             $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "/frequencyOsc" );
+                });
+            $(document).on('click', '#trippyGuy', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/trippyGuy" );
                 });
             $(document).on('click', '#drawPath', function(event) {
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "/drawPath" );
                 });
             $(document).on('click', '#particles', function(event) {
+                    console.log('clicked particles');
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "/particles" );
                 });
